@@ -1,0 +1,527 @@
+{
+	"version": "1.05",
+	"name": "jmx.Camel",
+	"type": "JMX",
+	"processTypes": [10,
+	12,
+	13,
+	16,
+	17,
+	18],
+	"entity": "PROCESS_GROUP_INSTANCE",
+	"configUI": {
+		"displayName": "Camel JMX"
+	},
+	"metrics": [{
+		"timeseries": {
+			"key": "routes.ExchangesCompleted",
+			"unit": "Count",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "ExchangesCompleted",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "routes.ExchangesFailed",
+			"unit": "Count",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "ExchangesFailed",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "routes.ExchangesTotal",
+			"unit": "Count",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "ExchangesTotal",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "routes.LastProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "LastProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "routes.MaxProcessingTime",
+			"unit": "Second",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "MaxProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "routes.MeanProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "MeanProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "routes.MinProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "MinProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "routes.TotalProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "routes",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "TotalProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.ExchangesCompleted",
+			"unit": "Count",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "ExchangesCompleted",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.ExchangesFailed",
+			"unit": "Count",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "ExchangesFailed",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.ExchangesTotal",
+			"unit": "Count",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "ExchangesTotal",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.LastProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "LastProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.MaxProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "MaxProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.MeanProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "MeanProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.MinProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "MinProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	},
+	{
+		"timeseries": {
+			"key": "processors.TotalProcessingTime",
+			"unit": "MilliSecond",
+			"dimensions": ["rx_pid",
+			"name"]
+		},
+		"source": {
+			"domain": "org.apache.camel",
+			"keyProperties": {
+				"type": "processors",
+				"context": "*",
+				"name": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "TotalProcessingTime",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "AVG",
+			"splitting": {
+				"name": "name",
+				"type": "keyProperty",
+				"keyProperty": "name"
+			}
+		}
+	}],
+	"keymetrics" : [
+	    {
+		"key" : "routes.MeanProcessingTime",
+		"aggregation" : "avg",
+		"mergeaggregation" : "sum",
+		"displayname" : "MeanProcessingTime"
+	    }
+	],
+	"ui": {
+		"keycharts": [{
+			"group": "Camel Routes JMX",
+			"title": "Camel Routes",
+			"series": [{
+				"key": "routes.MaxProcessingTime",
+				"displayname": "MaxProcessingTime",
+				"color": "rgba(101,152,186,0.4)",
+				"seriestype": "line"
+			},
+			{
+				"key": "routes.MeanProcessingTime",
+				"displayname": "MeanProcessingTime",
+				"color": "rgba(193,66,66,0.4)",
+				"seriestype": "line"
+			},
+			{
+				"key": "routes.MinProcessingTime",
+				"displayname": "MinProcessingTime",
+				"color": "rgba(63,191,63,0.4)",
+				"seriestype": "line"
+			}]
+		},
+		{
+			"group": "Camel Processors JMX",
+			"title": "Camel Processors",
+			"series": [{
+				"key": "processors.LastProcessingTime",
+				"displayname": "LastProcessingTime",
+				"color": "rgba(101,152,186,0.4)",
+				"seriestype": "line"
+			},
+			{
+				"key": "processors.MeanProcessingTime",
+				"displayname": "MeanProcessingTime",
+				"seriestype": "area",
+				"color": "#bdc9ff"
+			},
+			{
+				"key": "processors.TotalProcessingTime",
+				"displayname": "TotalProcessingTime",
+				"seriestype": "area"
+			}]
+		}],
+		"charts": [{
+			"group": "Camel Routes JMX",
+			"title": "Camel Routes",
+			"series": [{
+				"key": "routes.MaxProcessingTime",
+				"displayname": "MaxProcessingTime",
+				"color": "rgba(101,152,186,0.4)",
+				"seriestype": "line"
+			},
+			{
+				"key": "routes.MeanProcessingTime",
+				"displayname": "MeanProcessingTime",
+				"color": "rgba(193,66,66,0.4)",
+				"seriestype": "line"
+			},
+			{
+				"key": "routes.MinProcessingTime",
+				"displayname": "MinProcessingTime",
+				"color": "rgba(63,191,63,0.4)",
+				"seriestype": "line"
+			}]
+		},
+		{
+			"group": "Camel Processors JMX",
+			"title": "Camel Processors",
+			"series": [{
+				"key": "processors.LastProcessingTime",
+				"displayname": "LastProcessingTime",
+				"color": "rgba(101,152,186,0.4)",
+				"seriestype": "line"
+			},
+			{
+				"key": "processors.MeanProcessingTime",
+				"displayname": "MeanProcessingTime",
+				"seriestype": "area",
+				"color": "#bdc9ff"
+			},
+			{
+				"key": "processors.TotalProcessingTime",
+				"displayname": "TotalProcessingTime",
+				"seriestype": "area"
+			}]
+		}]
+	}
+}
