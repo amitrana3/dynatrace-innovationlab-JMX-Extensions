@@ -1,7 +1,9 @@
 This Camel Plugins collects below metrices.
 
 org.apache.camel
-  Camel Route
+
+
+Camel Route
     Exchanges Completed
     Exchanges Failed
     Exchanges Total
@@ -11,7 +13,9 @@ org.apache.camel
     Mean Processing Time
     Min Processing Time
     Total Processing Time 
-  Camel Proccessors
+
+
+Camel Proccessors
     Exchanges Completed
     Exchanges Failed
     Exchanges Total
